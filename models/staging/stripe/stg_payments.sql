@@ -7,4 +7,4 @@ select
     created,
     _batched_at as time_stamp
 
-from `dbt-tutorial`.stripe.payment 
+from {{ source('stripe','payment') }}
